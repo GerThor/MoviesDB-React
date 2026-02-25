@@ -11,6 +11,9 @@ const Home = () => {
             <button className="search__button btn" type="submit">Search</button>
           </form>
         </div>
+        <div className="home__body__figure">
+          <img src="https://st2.depositphotos.com/1105977/9877/i/450/depositphotos_98775856-stock-photo-retro-film-production-accessories-still.jpg" alt="" />
+        </div>
       </div>
     </div>
   )

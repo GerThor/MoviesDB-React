@@ -44,9 +44,10 @@
 
 .nav__link--btn {
   background-color: #38b6ff;
-  padding: 8px;
+  padding: 10px;
   border-radius: 20px;
   color: white;
+  font-weight: 700;
 }
 
 
@@ -65,15 +66,43 @@
 
 .row__home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
+  gap: 100px;
 }
 
 .home__body--header {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 110px;
+  /* transform: translateY(50px); */
 }
 
+#search__bar--form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
 
+#search__bar--input {
+  border-radius: 10px;
+  padding-left: 8px;
+  width: 280px;
+  height: 40px;
+}
+
+.search__button {
+  background-color: #38b6ff;
+  color:white;
+  padding: 4px;
+  border-radius: 10px;
+  height: 40px;
+  width: 80px;
+}
 
 
 /* FOOTER */
