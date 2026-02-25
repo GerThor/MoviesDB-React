@@ -1,18 +1,17 @@
 import React from 'react'
+import SearchBar from '../components/ui/SearchBar';
+import HomeFigure from "../assets/home_figure.jpg";
 
 const Home = () => {
   return (
-    <div className="home__body--container">
+    <div className="body__container">
       <div className="row row__home">
         <div className="home__body--header">
-          <h2>Search a Movie</h2>
-          <form id="search__bar--form"> 
-            <input id="search__bar--input" type="text" name="query" placeholder="Search by Movie Name" required/>
-            <button className="search__button btn" type="submit">Search</button>
-          </form>
+          <h2 className="search__bar--header">Search For Movies</h2>
+          <SearchBar></SearchBar>
         </div>
         <div className="home__body__figure">
-          <img src="https://st2.depositphotos.com/1105977/9877/i/450/depositphotos_98775856-stock-photo-retro-film-production-accessories-still.jpg" alt="" />
+          <img src={HomeFigure} alt="" />
         </div>
       </div>
     </div>

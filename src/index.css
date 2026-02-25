@@ -14,6 +14,12 @@
   min-height: 100vh;
 }
 
+.btn {
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+
 .nav__bar {
   display: flex;
   justify-content: space-between;
@@ -27,6 +33,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.nav__header--text {
+  color: #38b6ff;
 }
 
 .nav__links {
@@ -47,38 +57,13 @@
   padding: 10px;
   border-radius: 20px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
+  cursor: not-allowed;
 }
 
-
-/* HOME */
-
-.home__body--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-}
-
-.row {
-  max-width: 75%;
-}
-
-.row__home {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 100px;
-}
-
-.home__body--header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  margin-top: 110px;
-  /* transform: translateY(50px); */
+.search__bar--header {
+  font-size: 32px;
+  color: #38b6ff;
 }
 
 #search__bar--form {
@@ -105,6 +90,77 @@
 }
 
 
+/* HOME */
+
+.body__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  max-width: 75%;
+}
+
+.row__home {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 100px;
+}
+
+
+/* .row__movie--page {
+
+} */
+
+.home__body--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 110px;
+  /* transform: translateY(50px); */
+}
+
+/* .home__body__figure {
+  height: 2000px;
+} */
+
+
+
+
+
+/* MOVIES PAGE */
+
+
+.row__movie {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 50px;
+}
+
+.movie__header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movies__search--header {
+  margin: 0 auto;
+}
+
+#dropdown__sort--bar {
+  /* margin-left: 60px; */
+}
+
+
+
+
 /* FOOTER */
 
 .footer {
@@ -114,4 +170,5 @@
   background-color: #38b6ff;
   height: 100px;
   text-align: center;
+  margin-top: auto;
 }
