@@ -1,10 +1,22 @@
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Movies from "./pages/Movies.jsx";
+import Footer from "./components/Footer.jsx";
+import Nav from "./components/Nav.jsx";
 
 function App() {
   return (
-    <div className="App">
-      Test
-    </div>
+    <Router>
+      <div className="App">
+        <Nav></Nav>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          {/* Make a dynamic route from movie ID */}
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </Router>
   );
 }
 
