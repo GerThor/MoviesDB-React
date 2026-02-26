@@ -18,14 +18,14 @@ const SearchBar = () => {
     if (pathname === "/") {
       navigate("/movies")
     }
-    fetchMovieAPI();
+    // fetchMovieAPI();
   }
 
-  async function fetchMovieAPI () {
-    const {data} = await axios.get("https://www.omdbapi.com/?apikey=df6f10c4&s=fast&page=1")
-    const movieArray = data.Search;
-    console.log(movieArray)
-  }
+  // async function fetchMovieAPI () {
+  //   const {data} = await axios.get("https://www.omdbapi.com/?apikey=df6f10c4&s=fast&page=1")
+  //   const movieArray = data.Search;
+  //   console.log(movieArray)
+  // }
 
   // useEffect(() => {
   //   // handleFormSubmit();

@@ -3,6 +3,8 @@ import Home from "./pages/Home.jsx";
 import Movies from "./pages/Movies.jsx";
 import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
+import Movie from "./components/ui/Movie.jsx";
+import MovieInfo from "./pages/MovieInfo.jsx";
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/movies" element={<Movies />}></Route>
-          {/* <Route path="/:movieId" element= Make a dynamic route from movie ID */}
+          <Route path="/movies/:movieId" element={<MovieInfo />}></Route>
         </Routes>
         <Footer></Footer>
       </div>

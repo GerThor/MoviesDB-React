@@ -158,8 +158,36 @@
   /* margin-left: 60px; */
 }
 
+.movie__container--list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
+.arrow__key--pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 32px 0;
+  /* border: 1px solid black; */
+}
+
+.movie__poster {
+  width: 300px; 
+  height: 400px;
+  object-fit: contain;
+}
 
 /* FOOTER */
 
