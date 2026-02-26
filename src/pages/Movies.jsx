@@ -62,6 +62,8 @@ const Movies = () => {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=df6f10c4&s=${searchString}&page=${pageNumber}`,
     );
+    // sift through and remove duplicate ID's here? // Create a new cleaner dataset
+    
     // console.log(data);
     setMovieArray(data.Search);
     setTotalMovies(Number(data.totalResults))
