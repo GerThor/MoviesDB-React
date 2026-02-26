@@ -14,7 +14,7 @@ const Movies = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [pageNumberToggle, setPageNumberToggle] = useState(false);
   const [pageMovieRender, setPageMovieRender] = useState(false);
-  // const [totalMovies, setTotalMovies] = useState("");
+  const [totalMovies, setTotalMovies] = useState("");
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -41,8 +41,11 @@ const Movies = () => {
     );
     // console.log(data);
     setMovieArray(data.Search);
-    // setTotalMovies(data.totalResults)
-    // console.log("totalmovies:", totalMovies)
+    setTotalMovies(parseFloat(data.totalResults))
+    let numberOfMovies = parseFloat(data.totalResults);
+    console.log("totalmovies:", numberOfMovies)
+    console.log("totalmovies UseState:", totalMovies)
+
 
   }
 
