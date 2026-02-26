@@ -5,6 +5,7 @@ import axios from "axios";
 
 
 // possibly implement keeping page state on page refresh and when going from dynamic route back to movie page 
+// test useStates and go through logic of the useStates to ensure everything is being set properly to your intended features
 
 
 const Movies = () => {
@@ -15,10 +16,12 @@ const Movies = () => {
   const [pageNumberToggle, setPageNumberToggle] = useState(false);
   const [pageMovieRender, setPageMovieRender] = useState(false);
   const [totalMovies, setTotalMovies] = useState("");
+  const [totalMoviePages, setTotalMoviePages] = useState(0)
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     setFormSubmit(true);
+    setPageNumber(1)
     console.log("input value:", searchString);
   };
 
@@ -26,13 +29,33 @@ const Movies = () => {
     setSearchString(event.target.value);
   };
 
-  const handlePageArrows = (value) => {
-    setPageNumber(pageNumber + value);
-    if (pageNumber <= 0) {
-      setPageNumber(1);
+  const handlePageLeftArrow = () => {
+    if (pageNumber !== 1) {
+      setPageNumber(pageNumber - 1);
+      setPageNumberToggle(true);
     }
-    setPageNumberToggle(true);
   };
+
+  const handlePageRightArrow = () => {
+    if (pageNumber < totalMoviePages) {
+      setPageNumber(pageNumber + 1);
+      setPageNumberToggle(true);
+    }
+  };
+
+  function calculateMoviePages (totalMovies) {
+    let numberOfMovies = totalMovies;
+    let countPages = 0;
+    while (numberOfMovies > 10) {
+      numberOfMovies -= 10;
+      countPages += 1;
+    }
+    if (numberOfMovies > 0) {
+      setTotalMoviePages(countPages + 1)
+    } else {
+      setTotalMoviePages(countPages)
+    }
+  }
 
   async function fetchMovieAPI() {
     // const
@@ -41,12 +64,7 @@ const Movies = () => {
     );
     // console.log(data);
     setMovieArray(data.Search);
-    setTotalMovies(parseFloat(data.totalResults))
-    let numberOfMovies = parseFloat(data.totalResults);
-    console.log("totalmovies:", numberOfMovies)
-    console.log("totalmovies UseState:", totalMovies)
-
-
+    setTotalMovies(Number(data.totalResults))
   }
 
   useEffect(() => {
@@ -63,7 +81,13 @@ const Movies = () => {
       setPageNumberToggle(false);
       setPageMovieRender(true);
     }
-  }, [formSubmit, pageNumberToggle]);
+    if (totalMovies > 0 && pageMovieRender) {
+      calculateMoviePages(totalMovies);
+      console.log("totalmovies UseState:", totalMovies)
+    }
+
+
+  }, [formSubmit, pageNumberToggle, totalMovies, totalMoviePages]);
 
   return (
     <div className="body__container">
@@ -104,14 +128,14 @@ const Movies = () => {
             <>
               <button
                 className="btn left__arrow--page-btn"
-                onClick={() => handlePageArrows(-1)}
+                onClick={() => handlePageLeftArrow()}
               >
                 &#8592;
               </button>
-              <h4>Page {pageNumber} of 95</h4>
+              <h4>Page {pageNumber} of {totalMoviePages} </h4>
               <button
                 className="btn right__arrow--page-btn"
-                onClick={() => handlePageArrows(1)}
+                onClick={() => handlePageRightArrow()}
               >
                 &#8594;
               </button>

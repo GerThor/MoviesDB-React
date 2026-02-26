@@ -189,6 +189,34 @@
   object-fit: contain;
 }
 
+
+/* MOVIE INFORMATION PAGE */
+
+.row__movie--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.back__button__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  margin-left: 60px;
+}
+
+
+.movie__plot--header {
+  font-weight: 600;
+}
+
+
+
+
+
+
 /* FOOTER */
 
 .footer {
