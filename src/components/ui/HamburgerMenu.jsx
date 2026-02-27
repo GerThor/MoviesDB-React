@@ -17,7 +17,7 @@ function HamburgerMenu() {
             {isOpen && (
                 <nav className="menu">
                     <ul className="menu__hamburger--links">
-                        <Link to="/MoviesDB-React" className="hamburger__menu--link">Home</Link>
+                        <Link to="/" className="hamburger__menu--link">Home</Link>
                         <Link to="/movies" className="hamburger__menu--link">Find Your Movie</Link>
                         <Link className="hamburger__menu--link hamburger__menu--link-contact">Contact</Link> {/* link to go nowhere */}
                     </ul>

@@ -20,7 +20,7 @@ const Nav = () => {
       </div>
       <div className="nav__links--container">
         <ul className="nav__links">
-            <Link to="/MoviesDB-React" className="nav__link">Home</Link>
+            <Link to="/" className="nav__link">Home</Link>
             <Link to="/movies" className="nav__link">Find Your Movie</Link>
             <Link className="nav__link nav__link--btn">Contact</Link> {/* link to go nowhere */}
         </ul>
