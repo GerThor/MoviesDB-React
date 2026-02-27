@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/css/main.6cdea70f.css",
+    "main.js": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/js/main.05b35c23.js",
+    "static/js/453.1ef88cd3.chunk.js": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/js/453.1ef88cd3.chunk.js",
+    "static/media/watching-movie.jpg": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/media/watching-movie.e6a2be02281c15274a50.jpg",
+    "static/media/movie_logo.jpg": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/media/movie_logo.e3d18e6e74a1e39dadb8.jpg",
+    "index.html": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/index.html",
+    "main.6cdea70f.css.map": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/css/main.6cdea70f.css.map",
+    "main.05b35c23.js.map": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/js/main.05b35c23.js.map",
+    "453.1ef88cd3.chunk.js.map": "/%7BGerThor%7D.github.io/%7BMoviesDB-React%7D/static/js/453.1ef88cd3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cdea70f.css",
+    "static/js/main.05b35c23.js"
+  ]
+}
