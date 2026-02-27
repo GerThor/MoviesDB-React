@@ -22,6 +22,19 @@ const Movies = () => {
   const [searchString, setSearchString] = useState("");
   const [moviesLoading, setMoviesLoading] = useState(false);
 
+
+  function pageRefresh() {
+    setMovieArray([]);
+    setPageNumber(1);
+    setPageNumberToggle(false);
+    setPageMovieRender(false);
+    setTotalMovies("");
+    setTotalMoviePages(0);
+    setFormSubmit(false);
+    setSearchString("");
+    setMoviesLoading(false);
+  }
+
   const navigate = useNavigate();
 
   const handleFormInput = (event) => {
@@ -105,27 +118,31 @@ const Movies = () => {
   }
 
   useEffect(() => {
-    if (search || formSubmit) {
-      setMoviesLoading(true);
-      fetchMovieAPI();
-      setPageMovieRender(true);
-      setTimeout(() => {
-        setMoviesLoading(false);
-      }, 300);
-    }
-    if (pageNumberToggle) {
-      setMoviesLoading(true);
-      fetchMovieAPI();
-      // console.log(pageNumber);
-      setPageNumberToggle(false);
-      setPageMovieRender(true);
-      setTimeout(() => {
-        setMoviesLoading(false);
-      }, 300);
-    }
-    if (totalMovies > 0 && pageMovieRender) {
-      calculateMoviePages(totalMovies);
-      // console.log("totalmovies UseState:", totalMovies)
+    if(search !== null) {
+      if (search || formSubmit) {
+        setMoviesLoading(true);
+        fetchMovieAPI();
+        setPageMovieRender(true);
+        setTimeout(() => {
+          setMoviesLoading(false);
+        }, 300);
+      }
+      if (pageNumberToggle) {
+        setMoviesLoading(true);
+        fetchMovieAPI();
+        // console.log(pageNumber);
+        setPageNumberToggle(false);
+        setPageMovieRender(true);
+        setTimeout(() => {
+          setMoviesLoading(false);
+        }, 300);
+      }
+      if (totalMovies > 0 && pageMovieRender) {
+        calculateMoviePages(totalMovies);
+        // console.log("totalmovies UseState:", totalMovies)
+      }
+    } else {
+      pageRefresh();
     }
   }, [search, searchParams, pageNumberToggle, totalMovies, totalMoviePages]);
 
