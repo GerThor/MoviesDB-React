@@ -1,8 +1,8 @@
 {
-  "homepage": "https:{GerThor}.github.io/{MoviesDB-React}",
   "name": "movie-db-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://GerThor.github.io/MoviesDB-React",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
