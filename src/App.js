@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Nav></Nav>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/MoviesDB-React" element={<Home />}></Route>
           <Route path="/movies" element={<Movies />}></Route>
           <Route path="/movies/:movieId" element={<MovieInfo />}></Route>
         </Routes>
