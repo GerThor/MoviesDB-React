@@ -32,15 +32,15 @@ const MovieInfo = () => {
           <h2>Back to Movies</h2>
       </div>
       <div className="movie__information--body">
-        <img src={movieObject.Poster} className="movie__information--poster" alt="" />
+        <img src={movieObject.Poster} className="movie__poster" onerror="this.onerror=null;" alt="" />
         <div className="movie__information--text">
           <h2>{movieObject.Title}</h2>
           <p><span className="movie__plot--header">Genre:</span> {movieObject.Genre}</p>
           <p><span className="movie__plot--header">Writer(s):</span> {movieObject.Writer}</p>
           <p><span className="movie__plot--header">Actor(s):</span> {movieObject.Actors}</p>
           <p><span className="movie__plot--header">Runtime:</span> {movieObject.Runtime}</p>
-          <p><span className="movie__plot--header">IMDB Rating:</span> {movieObject.imdbRating} / 10</p> {/*add 1 fas fa star fontawesome icon to the left side of rating*/}
-          <p><span className="movie__plot--header">Plot Summary:</span> {movieObject.Plot}</p>
+          <p><span className="movie__plot--header">IMDB Rating:</span> {movieObject.imdbRating} / 10</p> {/*maybe add 1 fas fa star fontawesome icon to the left side of rating*/}
+          <p className="plot__summary"><span className="movie__plot--header">Plot Summary:</span> {movieObject.Plot}</p>
         </div>
       </div>
     </div>

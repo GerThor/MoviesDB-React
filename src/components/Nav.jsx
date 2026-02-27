@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MovieLogo from "../assets/movie_logo.jpg"
+import HamburgerMenu from "./ui/HamburgerMenu";
 
 const Nav = () => {
   return (
@@ -24,8 +25,13 @@ const Nav = () => {
             <Link className="nav__link nav__link--btn">Contact</Link> {/* link to go nowhere */}
         </ul>
       </div>
+      <HamburgerMenu />
     </div>
   );
 };
 
 export default Nav;
+
+
+
+
