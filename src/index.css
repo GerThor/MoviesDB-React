@@ -265,8 +265,9 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  height: 500px;
-  margin: 40px 200px;
+  /* height: 500px; This is causing the container to not expand, therefore causing container overflow issues */
+  margin: 0 200px;
+  margin-top: 80px;
 }
 
 .movie__information--text {
@@ -316,10 +317,14 @@
       width: calc(100% / 2);
   }
   .movie__information--body {
-    overflow: auto;
+    /* overflow: auto; */
     justify-content: flex-start;
     flex-direction: column;
     text-align: center;
+  }
+  .plot__summary {
+    display: flex;
+    flex-direction: column;
   }
 }
 
